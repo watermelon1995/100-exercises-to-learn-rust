@@ -8,7 +8,12 @@ impl Shape {
     // TODO: Implement the `radius` method using
     //  either an `if let` or a `let/else`.
     pub fn radius(&self) -> f64 {
-        todo!()
+        match &self {
+            Shape::Circle { radius } => *radius * 2 as f64 * std::f64::consts::PI,
+            _ => {
+                panic!("HIHI")
+            }
+        }
     }
 }
 
